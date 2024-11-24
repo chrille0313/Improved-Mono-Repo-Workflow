@@ -20,9 +20,7 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install commitlint
-        run: |
-          npm install conventional-changelog-conventionalcommits
-          npm install commitlint@latest
+        run: npm install -D @commitlint/config-conventional @commitlint/cli
 
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
